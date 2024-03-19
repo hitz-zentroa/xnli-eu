@@ -264,7 +264,6 @@ def main():
                 split="train",
                 cache_dir=model_args.cache_dir,
                 token=model_args.token,
-                download_mode="force_redownload",
             )
         else:
             train_dataset = load_dataset(
@@ -285,7 +284,6 @@ def main():
             split="validation",
             cache_dir=model_args.cache_dir,
             token=model_args.token,
-            #download_mode="force_redownload",
         )
     
     #this value has to be either "eu", "eu_mt" or "eu_native"  
@@ -298,7 +296,6 @@ def main():
             split="test",
             cache_dir=model_args.cache_dir,
             token=model_args.token,
-            download_mode="force_redownload",
         )
 
     label_list = [0,1,2]
