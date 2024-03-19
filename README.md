@@ -8,6 +8,27 @@ The datasets can be downloaded at: [ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu.zip](ix
 
 The datasets can also be downloaded from HuggingFace: https://huggingface.co/datasets/HiTZ/xnli-eu
 
+# Fine-tuning
+A script for fine-tuning models for XNLI (in any of the 15 original XNLI languages and Basque) and evaluating on either of the three XNLIeu datasets is available in the `fine-tuning` directory.
+Example of usage:
+
+```
+python run_xnli_eus.py \
+  --model_name_or_path google-bert/bert-base-multilingual-cased \
+  --language en \
+  --train_language eu \
+  --do_train \
+  --do_eval \
+  --per_device_train_batch_size 32 \
+  --learning_rate 5e-5 \
+  --num_train_epochs 2.0 \
+  --max_seq_length 128 \
+  --output_dir example_dir \
+  --save_steps -1
+```
+
+Adapted from the code at [https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification] to include Basque as train language and XNLIeu for evaluation. Distributed under its same license.
+
 # Decoder Evaluation
 
 Evaluation scripts and results for open decoder models are in the `evaluation` directory.
@@ -34,3 +55,4 @@ sbatch lm_eval_latxa-7b-v1.slurm
 ## Check Evaluation Results
 
 Evaluation results are in the `results` directory. Each model has a directory with the results of the evaluation in each task. The results are in the form of a json file with the average scores of the model in each task.
+
