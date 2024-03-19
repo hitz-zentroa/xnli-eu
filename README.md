@@ -8,6 +8,9 @@ The datasets can be downloaded at: [ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu.zip](ix
 
 The datasets can also be downloaded from HuggingFace: https://huggingface.co/datasets/HiTZ/xnli-eu
 
+# Dataset Analysis
+A Jupyter Notebook with the code used to obtain some statistics that have been included in the paper is available in the `dataset-analysis` directory.
+
 # Fine-tuning
 A script for fine-tuning models for XNLI (in any of the 15 original XNLI languages and Basque) and evaluating on either of the three XNLIeu datasets is available in the `fine-tuning` directory.
 Example of usage:
