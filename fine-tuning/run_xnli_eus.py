@@ -47,6 +47,16 @@ from transformers import (
 from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, send_example_telemetry
 from transformers.utils.versions import require_version
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--ev_dataset", type=str, default="eu", help="Choose a development dataset from the two partitions available on the HF of XNLIeu (eu, eu_mt)")
+parser.add_argument("--pred_dataset", type=str, default="eu", help="Choose a test dataset from the three partitions available on the HF of XNLIeu (eu, eu_mt, eu_native)")
+args, remaining_args = parser.parse_known_args()
+
+ev_dataset = args.ev_dataset
+pred_dataset = args.pred_dataset
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
@@ -190,7 +200,7 @@ def main():
     # We now keep distinct sets of args, for a cleaner separation of concerns.
 
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
-    model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+    model_args, data_args, training_args = parser.parse_args_into_dataclasses(remaining_args)
 
     if model_args.use_auth_token is not None:
         warnings.warn("The `use_auth_token` argument is deprecated and will be removed in v4.34.", FutureWarning)
@@ -274,8 +284,6 @@ def main():
                 token=model_args.token,
             )
 
-    #this value has to be either "eu" or "eu_mt"    
-    ev_dataset = "eu"
 
     if training_args.do_eval:
         eval_dataset = load_dataset(
@@ -286,8 +294,6 @@ def main():
             token=model_args.token,
         )
     
-    #this value has to be either "eu", "eu_mt" or "eu_native"  
-    pred_dataset = "eu"
 
     if training_args.do_predict:
         predict_dataset = load_dataset(
