@@ -4,7 +4,7 @@ XNLI is a popular Natural Language Inference (NLI) benchmark widely used to eval
 
 # Download Dataset
 
-The datasets can be downloaded at: [ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu.zip](https://ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu.zip)
+The datasets can be downloaded at: [https://ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu.zip](https://ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu.zip)
 
 The datasets can also be downloaded from HuggingFace: https://huggingface.co/datasets/HiTZ/xnli-eu
 
