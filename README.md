@@ -31,6 +31,7 @@ python run_xnli_eus.py \
 ```
 
 Adapted from the code at [https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification] to include Basque as train language and XNLIeu for evaluation. Distributed under its same license.
+This directory also includes the shell code that has been employed to perform all of the experiments described in the paper. The subdirectory `train` contains code to train models for the three fine-tuning approaches (translate-train, zero-shot and typology), and the subdirectory `predict` the code to evaluate these fine-tuned models on the three subsplits available on HuggingFace.
 
 # Decoder Evaluation
 
