@@ -8,6 +8,8 @@ The datasets can be downloaded at: [https://ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu
 
 The datasets can also be downloaded from HuggingFace: https://huggingface.co/datasets/HiTZ/xnli-eu
 
+It is distirbuted under the same licenses as [XNLI](https://github.com/facebookresearch/XNLI).
+
 # Dataset Analysis
 A Jupyter Notebook with the code used to obtain some statistics that have been included in the paper is available in the `dataset-analysis` directory.
 
