@@ -62,3 +62,15 @@ sbatch lm_eval_latxa-7b-v1.slurm
 
 Evaluation results are in the `results` directory. Each model has a directory with the results of the evaluation in each task. The results are in the form of a json file with the average scores of the model in each task.
 
+## Citation
+The [paper](https://arxiv.org/abs/2404.06996) that explains the dataset and experiments can be cited as follows:
+```
+@article{heredia2024xnlieu,
+      title={XNLIeu: a dataset for cross-lingual NLI in Basque}, 
+      author={Maite Heredia and Julen Etxaniz and Muitze Zulaika and Xabier Saralegi and Jeremy Barnes and Aitor Soroa},
+      year={2024},
+      eprint={2404.06996},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
