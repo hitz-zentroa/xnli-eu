@@ -41,12 +41,11 @@ Evaluation scripts and results for open decoder models are in the `evaluation` d
 
 ## Install Evaluation Harness
 
-You will need to install our fork of [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness). Clone the repository and checkout the `eustrivia` branch:
+You will need to install [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness).
 
 ```bash	
-git clone https://github.com/juletx/lm-evaluation-harness
+git clone https://github.com/EleutherAI/lm-evaluation-harness
 cd lm-evaluation-harness
-git checkout eustrivia
 pip install -e .
 ```
 
