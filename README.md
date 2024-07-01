@@ -66,12 +66,24 @@ Evaluation results are in the `results` directory. Each model has a directory wi
 ## Citation
 The [paper](https://arxiv.org/abs/2404.06996) that explains the dataset and experiments can be cited as follows:
 ```
-@article{heredia2024xnlieu,
-      title={XNLIeu: a dataset for cross-lingual NLI in Basque}, 
-      author={Maite Heredia and Julen Etxaniz and Muitze Zulaika and Xabier Saralegi and Jeremy Barnes and Aitor Soroa},
-      year={2024},
-      eprint={2404.06996},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{heredia-etal-2024-xnlieu,
+    title = "{XNLI}eu: a dataset for cross-lingual {NLI} in {B}asque",
+    author = "Heredia, Maite  and
+      Etxaniz, Julen  and
+      Zulaika, Muitze  and
+      Saralegi, Xabier  and
+      Barnes, Jeremy  and
+      Soroa, Aitor",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.naacl-long.234",
+    pages = "4177--4188",
+    abstract = "XNLI is a popular Natural Language Inference (NLI) benchmark widely used to evaluate cross-lingual Natural Language Understanding (NLU) capabilities across languages. In this paper, we expand XNLI to include Basque, a low-resource language that can greatly benefit from transfer-learning approaches. The new dataset, dubbed XNLIeu, has been developed by first machine-translating the English XNLI corpus into Basque, followed by a manual post-edition step. We have conducted a series of experiments using mono- and multilingual LLMs to assess a) the effect of professional post-edition on the MT system; b) the best cross-lingual strategy for NLI in Basque; and c) whether the choice of the best cross-lingual strategy is influenced by the fact that the dataset is built by translation. The results show that post-edition is necessary and that the translate-train cross-lingual strategy obtains better results overall, although the gain is lower when tested in a dataset that has been built natively from scratch. Our code and datasets are publicly available under open licenses.",
 }
 ```
