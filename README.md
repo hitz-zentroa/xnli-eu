@@ -10,7 +10,7 @@ The datasets can be downloaded at: [https://ixa2.si.ehu.eus/mheredia/XNLI-1.0-eu
 
 The datasets can also be downloaded from HuggingFace: https://huggingface.co/datasets/HiTZ/xnli-eu
 
-It is distirbuted under the same licenses as [XNLI](https://github.com/facebookresearch/XNLI).
+It is distributed under the same licenses as [XNLI](https://github.com/facebookresearch/XNLI).
 
 # Dataset Analysis
 A Jupyter Notebook with the code used to obtain some statistics that have been included in the paper is available in the `dataset-analysis` directory.
@@ -64,7 +64,7 @@ sbatch lm_eval_latxa-7b-v1.slurm
 Evaluation results are in the `results` directory. Each model has a directory with the results of the evaluation in each task. The results are in the form of a json file with the average scores of the model in each task.
 
 ## Citation
-The [paper](https://arxiv.org/abs/2404.06996) that explains the dataset and experiments can be cited as follows:
+The [paper](https://aclanthology.org/2024.naacl-long.234/) that explains the dataset and experiments can be cited as follows:
 ```
 @inproceedings{heredia-etal-2024-xnlieu,
     title = "{XNLI}eu: a dataset for cross-lingual {NLI} in {B}asque",
